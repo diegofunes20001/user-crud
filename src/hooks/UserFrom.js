@@ -1,6 +1,6 @@
-
+// src/hooks/UserForm.js
 import React, { useState, useEffect } from 'react';
-import Button from './Button';
+import Button from '../components/Button';
 
 const UserForm = ({ user, onSubmit, onCancel }) => {
   const [formData, setFormData] = useState({
@@ -29,7 +29,7 @@ const UserForm = ({ user, onSubmit, onCancel }) => {
   return (
     <form onSubmit={handleSubmit} className="card p-4 mb-4">
       <div className="mb-3">
-        <label className="form-label">Nombre</label>
+        <label className="form-label"><i className="fa-duotone fa-solid fa-circle-user"/> Nombre</label>
         <input
           type="text"
           className="form-control"
@@ -39,7 +39,7 @@ const UserForm = ({ user, onSubmit, onCancel }) => {
         />
       </div>
       <div className="mb-3">
-        <label className="form-label">Email</label>
+        <label className="form-label"><i class="fa-duotone fa-solid fa-envelope"/> Email</label>
         <input
           type="email"
           className="form-control"

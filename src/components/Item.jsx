@@ -1,6 +1,6 @@
-
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 import Button from './Button';
 
 const Item = ({ item, onDelete, onEdit }) => {
@@ -14,13 +14,13 @@ const Item = ({ item, onDelete, onEdit }) => {
             variant="outline-primary" 
             onClick={() => onEdit(item.id)} 
             className="me-2"
-          >
+          > 
             Editar
           </Button>
           <Button 
             variant="outline-danger" 
             onClick={() => onDelete(item.id)}
-          >
+          > 
             Eliminar
           </Button>
         </div>

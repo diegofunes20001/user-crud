@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 import './App.css';
-import UserList from './components/UserList';
-import UserForm from './components/UserForm';
+import UserList from '../src/hooks/UserList';
+import UserForm from '../src/hooks/UserFrom';
 import Button from './components/Button';
 
 const API_URL = 'https://api.escuelajs.co/api/v1/users';
@@ -67,9 +68,7 @@ export default function App() {
       
       {!showForm && (
         <div className="mb-4">
-          <Button onClick={() => setShowForm(true)}>
-            Nuevo Usuario
-          </Button>
+          <Button onClick={() => setShowForm(true)}> <i class="fa-duotone fa-regular fa-plus"/>  Nuevo Usuarios </Button>
         </div>
       )}
 
